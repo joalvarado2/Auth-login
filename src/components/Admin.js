@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {auth} from "../firebase"
 import {withRouter} from "react-router"
+import Firestore from './Firestore'
 
 const Admin = (props) => {
 
@@ -17,8 +18,11 @@ const Admin = (props) => {
     },[])
 
     return (
-        <div>
-            <h2>Ruta protegina</h2>
+        <div className="mt-5">
+            <h2 className="text-center">Ruta protegina</h2>
+            {user && (
+                <Firestore user={user}/>
+            )}
         </div>
     )
 }

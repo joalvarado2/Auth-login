@@ -63,6 +63,11 @@ const Login = (props) => {
         uid: res.user.uid,
       });
 
+      await db.collection(res.user.uid).add({
+        name: "Tarea de ejemplo",
+        fecha: Date.now()
+      })
+
       setEmail("");
       setError(null);
       setPass("");

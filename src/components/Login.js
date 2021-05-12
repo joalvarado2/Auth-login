@@ -38,7 +38,7 @@ const Login = (props) => {
       setEmail("");
       setError(null);
       setPass("");
-      props.history.push("/admin");
+      props.history.push("/admin");  // props.history se saca con withRouter y se usa para empujar hacia una ruta
 
     } catch (error) {
       console.log(error);
@@ -66,7 +66,7 @@ const Login = (props) => {
       setEmail("");
       setError(null);
       setPass("");
-      props.history.push("/admin");
+      props.history.push("/admin");  // props.history se saca con withRouter y se usa para empujar hacia una ruta
 
     } catch (error) {
       console.log(error);
